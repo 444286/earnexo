@@ -63,10 +63,47 @@ body{font-family:'Hind Siliguri',sans-serif;background:var(--bg);color:var(--tex
 .blocked-sub{font-size:14px;color:var(--muted);text-align:center;line-height:1.7}
 
 /* ── LOADER ── */
-#ls{position:fixed;inset:0;background:var(--bg);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
-.ll{font-family:'Baloo Da 2',sans-serif;font-size:28px;font-weight:800;background:linear-gradient(135deg,#ff7a1a,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.lsub{font-size:13px;color:var(--muted)}
-.lsp{width:36px;height:36px;border:3px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:sp .7s linear infinite}
+#ls{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;background:#0a0400}
+.ls-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(255,100,20,.13) 0%,transparent 70%)}
+.ls-orb{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
+.ls-orb1{width:300px;height:300px;background:rgba(255,80,0,.18);top:-60px;left:-80px;animation:orbFloat1 6s ease-in-out infinite}
+.ls-orb2{width:220px;height:220px;background:rgba(255,160,30,.12);bottom:-40px;right:-60px;animation:orbFloat2 7s ease-in-out infinite}
+.ls-orb3{width:160px;height:160px;background:rgba(255,50,0,.1);bottom:30%;left:10%;animation:orbFloat3 5s ease-in-out infinite}
+@keyframes orbFloat1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,20px) scale(1.1)}}
+@keyframes orbFloat2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-20px,-30px) scale(1.08)}}
+@keyframes orbFloat3{0%,100%{transform:translate(0,0)}50%{transform:translate(15px,-20px)}}
+.ls-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,120,0,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,120,0,.04) 1px,transparent 1px);background-size:40px 40px;animation:gridSlide 20s linear infinite}
+@keyframes gridSlide{from{background-position:0 0}to{background-position:40px 40px}}
+.ls-center{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:0}
+.ls-logo-wrap{position:relative;width:100px;height:100px;margin-bottom:28px}
+.ls-hex{position:absolute;inset:0;animation:hexSpin 8s linear infinite}
+.ls-hex svg{width:100%;height:100%}
+.ls-icon-bg{position:absolute;inset:12px;border-radius:50%;background:radial-gradient(circle at 40% 35%,rgba(255,140,50,.25),rgba(180,60,0,.4));display:flex;align-items:center;justify-content:center}
+.ls-icon-emoji{font-size:34px;animation:iconPulse 2s ease-in-out infinite;filter:drop-shadow(0 0 12px rgba(255,120,0,.6))}
+@keyframes iconPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes hexSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.ls-rings{position:absolute;inset:-20px;pointer-events:none}
+.ls-ring{position:absolute;border-radius:50%;border:1px solid transparent}
+.ls-ring1{inset:0;border-color:rgba(255,120,0,.35);animation:ringPulse 2s ease-in-out infinite}
+.ls-ring2{inset:-12px;border-color:rgba(255,160,50,.2);animation:ringPulse 2s ease-in-out infinite .4s}
+.ls-ring3{inset:-24px;border-color:rgba(255,200,80,.1);animation:ringPulse 2s ease-in-out infinite .8s}
+@keyframes ringPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.05)}}
+.ls-title{font-family:'Baloo Da 2',sans-serif;font-size:26px;font-weight:800;letter-spacing:1px;color:#fff;margin-bottom:4px;animation:fadeSlideUp .8s ease both .2s;opacity:0}
+.ls-title span{background:linear-gradient(135deg,#ff9a3c,#ff6a00,#ffcc44);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ls-sub{font-size:12px;color:rgba(255,180,80,.55);letter-spacing:3px;text-transform:uppercase;font-family:'Hind Siliguri',sans-serif;margin-bottom:36px;animation:fadeSlideUp .8s ease both .4s;opacity:0}
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.ls-bar-wrap{width:200px;height:3px;background:rgba(255,255,255,.07);border-radius:10px;overflow:hidden;animation:fadeSlideUp .8s ease both .6s;opacity:0;margin-bottom:16px}
+.ls-bar{height:100%;width:0%;background:linear-gradient(90deg,#c43a00,#ff7a1a,#ffb347);border-radius:10px;animation:barFill 2.2s cubic-bezier(.4,0,.2,1) forwards .7s;box-shadow:0 0 10px rgba(255,120,0,.5)}
+@keyframes barFill{0%{width:0%}60%{width:75%}85%{width:90%}100%{width:100%}}
+.ls-dots{display:flex;gap:6px;animation:fadeSlideUp .8s ease both .8s;opacity:0}
+.ls-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,120,0,.4)}
+.ls-dot:nth-child(1){animation:dotBlink 1.2s ease-in-out infinite 0s}
+.ls-dot:nth-child(2){animation:dotBlink 1.2s ease-in-out infinite .2s}
+.ls-dot:nth-child(3){animation:dotBlink 1.2s ease-in-out infinite .4s}
+@keyframes dotBlink{0%,100%{background:rgba(255,120,0,.25);transform:scale(1)}50%{background:rgba(255,150,50,.9);transform:scale(1.4)}}
+.ls-particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.ls-p{position:absolute;width:3px;height:3px;border-radius:50%;background:rgba(255,140,0,.6);animation:particleFloat linear infinite}
+@keyframes particleFloat{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-20px) scale(1);opacity:0}}
 @keyframes sp{to{transform:rotate(360deg)}}
 
 /* ── BOTTOM NAV ── */
@@ -310,10 +347,48 @@ select.fi option{background:#221500}
 
 <!-- LOADER -->
 <div id="ls">
-  <div class="ll">Zomato Platform</div>
-  <div class="lsub">Loading your account...</div>
-  <div class="lsp"></div>
+  <div class="ls-bg"></div>
+  <div class="ls-orb ls-orb1"></div>
+  <div class="ls-orb ls-orb2"></div>
+  <div class="ls-orb ls-orb3"></div>
+  <div class="ls-grid"></div>
+  <div class="ls-particles" id="lsParticles"></div>
+  <div class="ls-center">
+    <div class="ls-logo-wrap">
+      <div class="ls-rings">
+        <div class="ls-ring ls-ring1"></div>
+        <div class="ls-ring ls-ring2"></div>
+        <div class="ls-ring ls-ring3"></div>
+      </div>
+      <div class="ls-hex">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,4 93,27.5 93,72.5 50,96 7,72.5 7,27.5" stroke="url(#hexGrad)" stroke-width="1.5" fill="none" stroke-dasharray="6 3" opacity="0.7"/>
+          <polygon points="50,14 83,32 83,68 50,86 17,68 17,32" stroke="rgba(255,140,0,0.3)" stroke-width="1" fill="none"/>
+          <defs>
+            <linearGradient id="hexGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#ff6a00"/>
+              <stop offset="100%" stop-color="#ffcc44"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="ls-icon-bg">
+        <div class="ls-icon-emoji">🍕</div>
+      </div>
+    </div>
+    <div class="ls-title"><span>Earnexo</span> Platform</div>
+    <div class="ls-sub">আপনার একাউন্ট লোড হচ্ছে</div>
+    <div class="ls-bar-wrap"><div class="ls-bar"></div></div>
+    <div class="ls-dots">
+      <div class="ls-dot"></div>
+      <div class="ls-dot"></div>
+      <div class="ls-dot"></div>
+    </div>
+  </div>
 </div>
+<script>
+(function(){var c=document.getElementById('lsParticles');if(!c)return;for(var i=0;i<18;i++){var p=document.createElement('div');p.className='ls-p';var left=Math.random()*100;var dur=4+Math.random()*6;var delay=Math.random()*8;var size=2+Math.random()*3;p.style.cssText='left:'+left+'%;width:'+size+'px;height:'+size+'px;animation-duration:'+dur+'s;animation-delay:-'+delay+'s;opacity:'+(0.3+Math.random()*0.5);c.appendChild(p);}})();
+</script>
 
 <!-- HOME -->
 <div class="page active" id="page-home">
@@ -468,8 +543,8 @@ select.fi option{background:#221500}
           <option value="bkash">💰 bKash</option>
           <option value="nagad">💰 Nagad</option>
           <option value="rocket">💰 Rocket</option>
-          <option value="binance">🟡 Binance (USDT)</option>
-          <option value="crypto">₿ Crypto</option>
+          
+       
         </select>
         <span class="sarr">▾</span>
       </div>
