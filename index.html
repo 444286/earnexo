@@ -108,6 +108,17 @@ body{font-family:'Hind Siliguri',sans-serif;background:var(--bg);color:var(--tex
 .balsv{font-family:'Baloo Da 2',sans-serif;font-size:15px;font-weight:700;color:#fff}
 .balsl{font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;font-family:'Hind Siliguri',sans-serif}
 
+/* ── QUICK ACTION GRID (Home) ── */
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.qcard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:6px;cursor:pointer;transition:all .18s;position:relative;overflow:hidden}
+.qcard:active{transform:scale(.97)}
+.qcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(255,140,0,.35),transparent)}
+.qcard-ic{font-size:26px}
+.qcard-lbl{font-family:'Baloo Da 2',sans-serif;font-size:14px;font-weight:700;color:#fff}
+.qcard-val{font-size:11px;color:var(--muted);font-family:'Hind Siliguri',sans-serif}
+.qcard-accent{border-color:rgba(62,207,142,.2)}
+.qcard-accent::before{background:linear-gradient(90deg,transparent,rgba(62,207,142,.35),transparent)}
+
 /* ── SQUARE AD CARD ── */
 .adcard{background:rgba(255,140,0,0.08);border:1px solid rgba(255,140,0,0.22);border-radius:20px;aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:20px;margin-bottom:14px;position:relative;overflow:hidden;cursor:pointer;transition:all .2s}
 .adcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(255,140,0,.5),transparent)}
@@ -269,6 +280,12 @@ select.fi option{background:#221500}
 .empty{text-align:center;padding:28px 20px;color:var(--muted);font-size:13px;font-family:'Hind Siliguri',sans-serif}
 .eic{font-size:36px;margin-bottom:8px}
 .chip{border-radius:20px;padding:4px 10px;font-size:10px;font-weight:600;background:var(--as);color:var(--accent2);border:1px solid rgba(255,122,26,.25);font-family:'Hind Siliguri',sans-serif}
+
+/* ── TASK PAGE STATS BAR ── */
+.task-stats-bar{display:flex;gap:8px;margin-bottom:14px}
+.tsb-item{flex:1;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px;text-align:center}
+.tsb-val{font-family:'Baloo Da 2',sans-serif;font-size:18px;font-weight:800;color:var(--accent2)}
+.tsb-lbl{font-size:10px;color:var(--muted);margin-top:2px;font-family:'Hind Siliguri',sans-serif}
 </style>
 </head>
 <body>
@@ -323,6 +340,58 @@ select.fi option{background:#221500}
       <div class="bals"><div class="balsv" id="sEarned">0.00</div><div class="balsl">আয় করা</div></div>
       <div class="bals"><div class="balsv" id="sWd">0.00</div><div class="balsl">উত্তোলন</div></div>
       <div class="bals"><div class="balsv" id="sRef">0</div><div class="balsl">রেফারেল</div></div>
+    </div>
+  </div>
+
+  <!-- Quick action cards linking to Task page -->
+  <div class="quick-grid">
+    <div class="qcard" onclick="showPageByName('tasks')">
+      <div class="qcard-ic">🎬</div>
+      <div class="qcard-lbl">বিজ্ঞাপন দেখুন</div>
+      <div class="qcard-val" id="homeAdSub">Daily: 0/5</div>
+    </div>
+    <div class="qcard qcard-accent" onclick="showPageByName('tasks')">
+      <div class="qcard-ic">⚡</div>
+      <div class="qcard-lbl">Tasks করুন</div>
+      <div class="qcard-val" id="homeTaskSub">টাকা আয় করুন</div>
+    </div>
+  </div>
+
+  <!-- Recent activity strip -->
+  <div class="sec2">📊 সারসংক্ষেপ</div>
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px 16px;margin-bottom:8px">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
+      <span style="font-size:13px;color:var(--muted);font-family:'Hind Siliguri',sans-serif">আজকের আয়</span>
+      <span style="font-size:14px;font-weight:700;color:var(--green);font-family:'Baloo Da 2',sans-serif" id="todayEarned">৳ 0.00</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
+      <span style="font-size:13px;color:var(--muted);font-family:'Hind Siliguri',sans-serif">মোট রেফারেল</span>
+      <span style="font-size:14px;font-weight:700;color:var(--accent2);font-family:'Baloo Da 2',sans-serif" id="homeRefCount">0</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0">
+      <span style="font-size:13px;color:var(--muted);font-family:'Hind Siliguri',sans-serif">সম্পন্ন Tasks</span>
+      <span style="font-size:14px;font-weight:700;color:var(--accent);font-family:'Baloo Da 2',sans-serif" id="homeTaskCount">0</span>
+    </div>
+  </div>
+</div>
+
+<!-- TASKS PAGE (new) -->
+<div class="page" id="page-tasks">
+  <div class="pgt"><div class="pgtitle">Tasks & Ads</div></div>
+
+  <!-- Stats bar -->
+  <div class="task-stats-bar">
+    <div class="tsb-item">
+      <div class="tsb-val" id="tsAdCount">0/5</div>
+      <div class="tsb-lbl">আজকের Ads</div>
+    </div>
+    <div class="tsb-item">
+      <div class="tsb-val" id="tsDone">0</div>
+      <div class="tsb-lbl">Tasks সম্পন্ন</div>
+    </div>
+    <div class="tsb-item">
+      <div class="tsb-val" id="tsEarned">৳0</div>
+      <div class="tsb-lbl">আজকের আয়</div>
     </div>
   </div>
 
@@ -418,10 +487,13 @@ select.fi option{background:#221500}
   <div id="wdHist"><div class="empty"><div class="eic">📭</div>No withdrawals yet</div></div>
 </div>
 
-<!-- BOTTOM NAV -->
+<!-- BOTTOM NAV — 5 items now -->
 <nav class="bnav">
   <div class="ni active" onclick="showPage('home',this)">
-    <div class="ni-ic">🏡</div><div class="ni-lb">ড্যাশবোর্ড</div><div class="ni-dot"></div>
+    <div class="ni-ic">🏡</div><div class="ni-lb">হোম</div><div class="ni-dot"></div>
+  </div>
+  <div class="ni" onclick="showPage('tasks',this)">
+    <div class="ni-ic">⚡</div><div class="ni-lb">টাস্ক</div><div class="ni-dot"></div>
   </div>
   <div class="ni" onclick="showPage('support',this)">
     <div class="ni-ic">🎧</div><div class="ni-lb">হেল্প</div><div class="ni-dot"></div>
@@ -664,17 +736,34 @@ function isDailyLimitReached(){
   return APP.watchedAds.filter(w=>w.type==='watch_chain'&&new Date(w.date).toDateString()===today).length>=limit;
 }
 
+function getTodayAdCount(){
+  const today=new Date().toDateString();
+  return APP.watchedAds.filter(w=>w.type==='watch_chain'&&new Date(w.date).toDateString()===today).length;
+}
+
+function getTodayEarned(){
+  const today=new Date().toDateString();
+  const adEarn=APP.watchedAds.filter(w=>w.type==='watch_chain'&&new Date(w.date).toDateString()===today).reduce((s,w)=>s+(w.reward||0),0);
+  return adEarn;
+}
+
 function updateWatchCard(){
   const wc=APP.settings.watchChain||{};
   const reward=wc.reward||0.5;
   const limit=wc.dailyLimit||5;
-  const today=new Date().toDateString();
-  const todayCount=APP.watchedAds.filter(w=>w.type==='watch_chain'&&new Date(w.date).toDateString()===today).length;
+  const todayCount=getTodayAdCount();
   document.getElementById('adCardReward').textContent=`+৳ ${reward.toFixed(2)}`;
   document.getElementById('adovReward').textContent=reward.toFixed(2);
   document.getElementById('adCardSub').textContent=`Daily limit: ${limit} · Today: ${todayCount}/${limit}`;
   document.getElementById('adProgLbl').textContent=`${todayCount} / ${limit}`;
   document.getElementById('adProgFill').style.width=`${Math.min(100,(todayCount/limit)*100)}%`;
+  // update task page stats bar
+  document.getElementById('tsAdCount').textContent=`${todayCount}/${limit}`;
+  document.getElementById('tsDone').textContent=APP.completedTasks.length;
+  document.getElementById('tsEarned').textContent=`৳${getTodayEarned().toFixed(2)}`;
+  // update home quick cards
+  document.getElementById('homeAdSub').textContent=`আজ: ${todayCount}/${limit}`;
+  document.getElementById('homeTaskSub').textContent=`${APP.completedTasks.length} সম্পন্ন`;
   checkCooldown();
 }
 
@@ -853,15 +942,33 @@ function updateUI(){
   document.getElementById('rCoins').textContent=`৳${(refCount*(APP.settings.referralBonus||5)).toFixed(2)}`;
   document.getElementById('rActive').textContent=refCount;
   document.getElementById('rLink').textContent=`https://t.me/${APP.settings.botUsername||'YourBot'}?start=${APP.referralCode}`;
+  // home summary
+  document.getElementById('todayEarned').textContent=`৳ ${getTodayEarned().toFixed(2)}`;
+  document.getElementById('homeRefCount').textContent=refCount;
+  document.getElementById('homeTaskCount').textContent=APP.completedTasks.length;
   renderRefList();renderTasks();
 }
 
+// showPage with nav element reference
 function showPage(p,el){
   document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
   document.querySelectorAll('.ni').forEach(x=>x.classList.remove('active'));
   document.getElementById('page-'+p).classList.add('active');
   el.classList.add('active');
 }
+
+// showPageByName — navigate without needing the nav element (used by quick cards)
+function showPageByName(p){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.ni').forEach(x=>x.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  // find and activate matching nav item
+  document.querySelectorAll('.ni').forEach(ni=>{
+    const lb=ni.querySelector('.ni-lb');
+    if(lb&&lb.textContent.trim()==='টাস্ক'&&p==='tasks')ni.classList.add('active');
+  });
+}
+
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
 function ta(iso){if(!iso)return'';const m=Math.floor((Date.now()-new Date(iso))/60000);if(m<1)return'Just now';if(m<60)return`${m}m ago`;const h=Math.floor(m/60);if(h<24)return`${h}h ago`;return`${Math.floor(h/24)}d ago`;}
 function fd(iso){if(!iso)return'—';return new Date(iso).toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short'});}
