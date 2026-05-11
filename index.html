@@ -680,12 +680,6 @@ window.addEventListener('DOMContentLoaded',async()=>{
     db.ref('settings').on('value',snap=>{
       const s=snap.val()||{};
       APP.settings={...APP.settings,...s};
-      // Firebase stores arrays as numeric-key objects — convert back
-      APP.settings.tasks=toArr(s.tasks);
-      APP.settings.ads=toArr(s.ads);
-      APP.settings.supportCards=toArr(s.supportCards);
-      if(s.watchChain?.slots)APP.settings.watchChain.slots=toArr(s.watchChain.slots);
-      if(s.withdrawChain?.slots)APP.settings.withdrawChain.slots=toArr(s.withdrawChain.slots);
       renderTasks();renderSupport();renderVideo();
       updateWatchCard();updateWdBtn();updateUI();
       const gpid=s.credentials?.gigapub?.scriptId;
