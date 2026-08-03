@@ -12,7 +12,6 @@
 <script src="https://oatstuckalfred.com/04/3e/bf/043ebfb41acb718993046dd9841036fe.js"></script>
 <script src='//libtl.com/sdk.js' data-zone='10900318' data-sdk='show_10900318'></script>
 
-<!-- FontAwesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&family=Hind+Siliguri:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -105,9 +104,7 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
 .balance-taka-label { font-family:'Hind Siliguri',sans-serif; font-size:18px; font-weight:700; color:var(--taka); }
 .balance-sub { font-size:11px; color:var(--text-muted); margin-bottom:12px; }
 
-/* ===== FIX 1: stats-boxes side by side (row) ===== */
 .stats-boxes { display:inline-flex; gap:6px; flex-wrap:nowrap; flex-direction:row; }
-
 .stat-box { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:6px 10px; display:flex; align-items:center; gap:8px; backdrop-filter:blur(5px); }
 .stat-box.withdrawn { background:rgba(30,10,70,0.6); border-color:#5b21b6; }
 .stat-box.earned { background:rgba(10,40,20,0.6); border-color:#166534; }
@@ -146,7 +143,7 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
 .marquee-wrap { background:linear-gradient(90deg,#1c1060,#2e1285); border:1px solid rgba(124,111,253,.3); border-radius:10px; padding:8px 0; margin-bottom:16px; overflow:hidden; }
 .marquee-wrap marquee { color:#ffd54f; font-weight:700; font-size:13px; }
 
-/* ===================== AD SECTION (Watch Card) ===================== */
+/* ===================== AD SECTION ===================== */
 .ad-section {
   background:#150d05; border:1px solid #785a16; border-radius:20px;
   padding:20px; position:relative; box-shadow:0 0 30px rgba(234,179,8,0.15);
@@ -164,7 +161,6 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
 .ad-s-item h4 i.gold { color:#facc15; font-size:11px; }
 .ad-s-item p { font-size:9px; color:var(--text-muted); font-family:'Hind Siliguri',sans-serif; }
 
-/* Watch Button */
 .watch-ad-btn { background:linear-gradient(90deg,#fef08a 0%,#f59e0b 50%,#d97706 100%); border:none; width:100%; padding:12px 14px; border-radius:40px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 4px 20px rgba(245,158,11,0.4),inset 0 -3px 5px rgba(0,0,0,0.2); cursor:pointer; position:relative; z-index:2; transition:all .2s; }
 .watch-ad-btn:active { transform:scale(.97); }
 .watch-ad-btn:disabled { opacity:.65; pointer-events:none; cursor:not-allowed; }
@@ -184,11 +180,9 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
 .btn-arrow { width:34px; height:34px; background:white; border-radius:50%; display:flex; justify-content:center; align-items:center; color:#ea580c; font-size:14px; flex-shrink:0; }
 .ad-footer { text-align:center; margin-top:12px; font-size:10px; color:#fde047; display:flex; align-items:center; justify-content:center; gap:6px; font-family:'Hind Siliguri',sans-serif; }
 
-/* Cooldown Bar */
 .cooldown-bar-wrap { width:100%; height:4px; background:rgba(255,255,255,.1); border-radius:4px; margin-top:10px; overflow:hidden; display:none; }
 .cooldown-bar { height:100%; background:var(--yellow); border-radius:4px; transition:width 1s linear; }
 
-/* Pure CSS 3D Play */
 .css-3d-play-container { position:absolute; right:0px; top:25px; width:140px; height:120px; z-index:1; transform:perspective(300px) rotateY(-10deg) rotateX(5deg); }
 .css-play-box { position:absolute; top:10px; right:15px; width:90px; height:90px; background:linear-gradient(135deg,#422006,#000); border-radius:24px; border:6px solid #facc15; box-shadow:0 0 25px rgba(250,204,21,0.5),-8px 12px 15px rgba(0,0,0,0.8),inset 2px 2px 10px rgba(255,255,255,0.3),inset -5px -5px 15px rgba(0,0,0,0.8); display:flex; justify-content:center; align-items:center; }
 .css-play-triangle { width:0; height:0; border-top:16px solid transparent; border-bottom:16px solid transparent; border-left:28px solid #facc15; filter:drop-shadow(2px 4px 4px rgba(0,0,0,0.6)); margin-left:8px; }
@@ -196,7 +190,6 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
 .play-coin-1 { top:-5px; right:8px; z-index:-1; transform:rotate(15deg); width:28px; height:28px; font-size:12px; }
 .play-coin-2 { bottom:10px; left:0px; z-index:5; transform:rotate(-20deg); width:26px; height:26px; font-size:12px; }
 
-/* Mini Cards */
 .minicard { display:flex; align-items:center; gap:12px; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:12px 14px; margin-bottom:10px; }
 .minicard-ic { width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
 .minicard-inf { flex:1; min-width:0; }
@@ -209,8 +202,6 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
 .task-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; margin-top:8px; }
 .task-header h3 { font-size:15px; font-weight:600; display:flex; align-items:center; gap:8px; }
 .task-header a { color:var(--text-muted); font-size:11px; text-decoration:none; display:flex; align-items:center; gap:4px; }
-
-/* Horizontal task slider */
 .task-slider { display:flex; gap:10px; overflow-x:auto; padding-bottom:10px; scrollbar-width:none; }
 .task-slider::-webkit-scrollbar { display:none; }
 .task-slide-item { background:var(--card-bg); border-radius:12px; padding:12px; min-width:175px; display:flex; align-items:center; gap:10px; position:relative; border:1px solid var(--border); transition:all .18s; }
@@ -241,9 +232,7 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
 .tbig.cancel { background:rgba(255,255,255,.06); color:var(--muted); border:1px solid var(--border); }
 .task-verify-status { font-size:12px; margin-top:8px; min-height:18px; font-family:'Poppins',sans-serif; }
 
-/* ===================== AD OVERLAY — Screenshot-style purple card ===================== */
-
-/* Full-screen dark backdrop */
+/* ===================== AD OVERLAY ===================== */
 .adov {
   position:fixed; inset:0;
   background:rgba(0,0,0,.72);
@@ -253,13 +242,9 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
   gap:0; padding:28px;
 }
 .adov.open { display:flex; }
-
-/* Hide unused type badge & title */
 .adov-type  { display:none!important; }
 .adov-title { display:none!important; }
 .adov-step-lbl,.adov-net-name,.adov-status { display:none; }
-
-/* ── Purple card shell ── */
 .adov-card {
   background:linear-gradient(155deg,#6e65f5 0%,#5548d9 100%);
   border-radius:28px;
@@ -272,8 +257,6 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
   gap:0;
   box-shadow:0 24px 64px rgba(0,0,0,.55);
 }
-
-/* ── Spinner — thin ring like screenshot ── */
 .adov-spinner-wrap {
   width:86px; height:86px;
   display:flex; align-items:center; justify-content:center;
@@ -288,8 +271,6 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
   animation:adovSpin .95s linear infinite;
 }
 @keyframes adovSpin { to{transform:rotate(360deg)} }
-
-/* ── Steps bar: thin white pills ── */
 .adov-steps {
   display:flex; gap:6px;
   width:100%;
@@ -304,8 +285,6 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
 .adov-s.active { background:#fff; animation:adovPuls .85s infinite; }
 .adov-s.skip   { background:rgba(255,255,255,.12); }
 @keyframes adovPuls { 0%,100%{opacity:1} 50%{opacity:.4} }
-
-/* ── Bengali instruction text ── */
 .adov-waiting {
   font-family:'Hind Siliguri','Poppins',sans-serif;
   font-size:17px; font-weight:600;
@@ -315,8 +294,6 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
   width:100%;
 }
 .adov-waiting.show { display:block; }
-
-/* ── Thin white divider (shown when waiting text shows) ── */
 .adov-divider {
   width:100%; height:2px;
   background:rgba(255,255,255,.38);
@@ -324,8 +301,6 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
   margin-bottom:20px;
   display:none;
 }
-
-/* ── Next / Continue button — white pill ── */
 .adov-continue {
   background:#fff;
   color:#4840c8;
@@ -343,15 +318,11 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
 }
 .adov-continue.show { display:block; }
 .adov-continue:active { transform:scale(.97); box-shadow:0 2px 8px rgba(0,0,0,.18); }
-
-/* ── Hidden elements kept for JS refs ── */
 .adov-reward-wrap { display:none!important; }
 .adov-reward      { display:none!important; }
 .adov-taka        { display:none!important; }
 .adov-rsub        { display:none!important; }
 .adov-msg         { display:none!important; }
-
-/* ── Withdrawal loading ── */
 .adov-wd-loading { display:none; flex-direction:column; align-items:center; gap:16px; }
 .adov-wd-loading.show { display:flex; }
 .adov-wd-spinner {
@@ -362,8 +333,6 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
   animation:adovSpin .8s linear infinite;
 }
 .adov-wd-txt { font-size:14px; color:rgba(255,255,255,.75); font-family:'Poppins',sans-serif; }
-
-/* ── Completion state ── */
 @keyframes popIn { from{transform:scale(0)} to{transform:scale(1)} }
 .adov-complete { text-align:center; padding:8px 0; display:none; flex-direction:column; align-items:center; gap:10px; }
 .adov-complete.show { display:flex; }
@@ -372,7 +341,6 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
 .adov-complete-sub { font-size:13px; color:rgba(255,255,255,.7); font-family:'Poppins',sans-serif; }
 
 /* ===================== OTHER PAGES ===================== */
-/* Support */
 .vcard { background:#000; border-radius:20px; overflow:hidden; margin-bottom:14px; border:1px solid var(--border); }
 .vph { width:100%; aspect-ratio:16/9; background:linear-gradient(135deg,#0a0a1a,#141428); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; position:relative; overflow:hidden; cursor:pointer; }
 .vplay { width:62px; height:62px; border-radius:50%; background:rgba(124,111,253,.75); display:flex; align-items:center; justify-content:center; font-size:26px; border:2px solid rgba(255,255,255,.2); z-index:2; }
@@ -410,43 +378,321 @@ body { background:var(--bg-dark); color:var(--text-main); min-height:100vh; over
 .rdt { font-size:11px; color:var(--muted); margin-top:2px; font-family:'Poppins',sans-serif; }
 .re { font-size:13px; font-weight:700; color:var(--green); margin-left:auto; white-space:nowrap; font-family:'Poppins',sans-serif; }
 
-/* Wallet */
-.wbal { background:linear-gradient(135deg,#0d1117,#0a1f18); border:1px solid rgba(0,224,150,.2); border-radius:20px; padding:22px; margin-bottom:14px; text-align:center; position:relative; overflow:hidden; }
-.wbal::before { content:''; position:absolute; top:-30px; left:50%; transform:translateX(-50%); width:220px; height:220px; border-radius:50%; background:radial-gradient(circle,rgba(0,224,150,.07),transparent 70%); }
-.wbl { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:2px; font-weight:700; font-family:'Poppins',sans-serif; }
-.wba-wrap { display:flex; align-items:baseline; justify-content:center; gap:8px; position:relative; z-index:1; }
-.wba { font-family:'Poppins',sans-serif; font-size:44px; font-weight:700; color:var(--green); line-height:1; }
-.wba-taka { font-family:'Hind Siliguri',sans-serif; font-size:20px; font-weight:700; color:var(--taka); }
-.wbs { font-size:12px; color:var(--muted); margin-top:4px; font-family:'Poppins',sans-serif; }
-.wdform { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:18px; margin-bottom:14px; }
-.ftitle { font-family:'Poppins',sans-serif; font-size:16px; font-weight:700; color:#fff; margin-bottom:16px; display:flex; align-items:center; gap:8px; }
-.fg { margin-bottom:14px; }
-.sw { position:relative; }
-select.fi, input.fi { width:100%; background:var(--bg3); border:1px solid var(--border); border-radius:12px; padding:13px 14px; font-size:14px; color:#fff; font-family:'Poppins',sans-serif; outline:none; transition:border-color .2s; appearance:none; -webkit-appearance:none; }
-select.fi:focus, input.fi:focus { border-color:rgba(124,111,253,.5); }
-select.fi option { background:#1a1d26; }
-.sarr { position:absolute; right:14px; top:50%; transform:translateY(-50%); color:var(--muted); pointer-events:none; font-size:12px; }
-.wd-ad-info { background:rgba(124,111,253,.08); border:1px solid rgba(124,111,253,.2); border-radius:12px; padding:12px 14px; margin-top:12px; font-size:12px; color:rgba(255,255,255,.7); display:none; line-height:1.6; font-family:'Poppins',sans-serif; }
-.bigbtn { width:100%; border:none; border-radius:16px; padding:17px; font-size:16px; font-weight:700; cursor:pointer; font-family:'Poppins',sans-serif; display:flex; align-items:center; justify-content:center; gap:10px; transition:all .2s; letter-spacing:.2px; }
-.bigbtn:active { transform:scale(.97); }
-.bigbtn:disabled { opacity:.65; pointer-events:none; cursor:not-allowed; }
-.wdbtn-main { background:linear-gradient(135deg,var(--green),#00b377); color:#fff; }
-.hitem { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:14px; margin-bottom:9px; }
-.htop { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
-.hwallet { display:flex; align-items:center; gap:8px; }
-.hwic { width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; }
-.hwn { font-size:13px; font-weight:600; color:#fff; font-family:'Poppins',sans-serif; }
-.hamt { font-family:'Poppins',sans-serif; font-size:16px; font-weight:700; color:#fff; }
-.hbtm { display:flex; align-items:center; justify-content:space-between; }
-.hacc { font-size:11px; color:var(--muted); font-family:monospace; }
-.sbdg { border-radius:20px; padding:4px 10px; font-size:11px; font-weight:600; font-family:'Poppins',sans-serif; }
-.sp { background:var(--ys); color:var(--yellow); border:1px solid rgba(255,200,74,.25); }
-.sa { background:var(--gs); color:var(--green); border:1px solid rgba(0,224,150,.25); }
-.sr { background:var(--rs); color:var(--red); border:1px solid rgba(255,95,95,.25); }
-.ht { font-size:11px; color:var(--muted); margin-top:6px; font-family:'Poppins',sans-serif; }
-.hrr { background:var(--rs); border:1px solid rgba(255,95,95,.2); border-radius:8px; padding:8px 10px; font-size:11px; color:var(--red); margin-top:8px; display:flex; gap:6px; font-family:'Poppins',sans-serif; }
+/* ===================== WALLET PAGE — SCREENSHOT STYLE ===================== */
 
-/* ===================== BOTTOM NAV (new design) ===================== */
+/* Balance Card */
+.wbal-card {
+  background:linear-gradient(145deg,#0d0a1f 0%,#130a3a 50%,#0a0818 100%);
+  border:1px solid rgba(124,111,253,0.3);
+  border-radius:20px;
+  padding:22px 20px 20px;
+  margin-bottom:12px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 8px 32px rgba(80,40,200,0.25);
+}
+.wbal-card::after {
+  content:'';
+  position:absolute;
+  bottom:-50px; right:-50px;
+  width:180px; height:180px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(124,111,253,0.18),transparent 70%);
+  pointer-events:none;
+}
+.wbal-top {
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:16px;
+}
+.wbal-label {
+  display:flex; align-items:center; gap:8px;
+  font-size:13px; font-weight:600; color:#c4b5fd;
+  font-family:'Poppins',sans-serif;
+}
+.wbal-label i { font-size:16px; color:#a855f7; }
+
+/* CSS 3D wallet inside balance card */
+.wbal-3d {
+  position:relative; width:88px; height:68px;
+  transform:perspective(260px) rotateY(-12deg) rotateX(8deg);
+  flex-shrink:0;
+}
+.wbal-body {
+  position:absolute; bottom:0; right:0;
+  width:72px; height:52px;
+  background:linear-gradient(135deg,#9333ea,#4c1d95);
+  border-radius:9px;
+  box-shadow:-5px 8px 14px rgba(0,0,0,0.6),inset 1px 1px 4px rgba(255,255,255,0.25);
+  border:1px solid #7c3aed;
+}
+.wbal-flap {
+  position:absolute; top:0; right:0;
+  width:50px; height:100%;
+  background:linear-gradient(135deg,#a855f7,#6d28d9);
+  border-radius:0 9px 9px 0;
+  border-left:1px solid #5b21b6;
+  box-shadow:inset 1px 1px 3px rgba(255,255,255,0.2);
+}
+.wbal-btn {
+  position:absolute; left:-7px; top:50%; transform:translateY(-50%);
+  width:14px; height:14px;
+  background:radial-gradient(circle at 30% 30%,#fef08a,#ca8a04);
+  border-radius:50%;
+  box-shadow:1px 2px 5px rgba(0,0,0,0.5);
+}
+.wbal-c {
+  position:absolute;
+  width:24px; height:24px;
+  background:radial-gradient(circle at 30% 30%,#fef08a,#eab308,#854d0e);
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700; color:#713f12;
+  border:1.5px solid #facc15;
+  box-shadow:1px 3px 7px rgba(0,0,0,0.45);
+  font-family:'Hind Siliguri',sans-serif;
+}
+.wbal-c1 { top:-12px; left:16px; transform:rotate(15deg); }
+.wbal-c2 { top:0; right:-2px; transform:rotate(-20deg); width:20px; height:20px; font-size:9px; }
+
+.wbal-amount-row { margin-bottom:10px; }
+.wbal-taka { font-size:30px; font-weight:700; color:#fff; font-family:'Poppins',sans-serif; vertical-align:middle; line-height:1; }
+.wbal-num { font-size:40px; font-weight:800; color:#fff; font-family:'Poppins',sans-serif; line-height:1; }
+.wbal-badge {
+  display:inline-flex; align-items:center; gap:7px;
+  background:rgba(0,200,120,0.12);
+  border:1px solid rgba(0,200,120,0.28);
+  border-radius:20px;
+  padding:6px 14px;
+  font-size:12px; font-weight:600; color:#00e096;
+  font-family:'Poppins',sans-serif;
+}
+.wbal-badge i { font-size:13px; }
+
+/* Stats Row */
+.wstats-row {
+  display:grid; grid-template-columns:1fr 1fr;
+  background:#0c0a1e;
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:16px;
+  overflow:hidden;
+  margin-bottom:16px;
+}
+.wstat-item {
+  padding:16px 18px;
+  display:flex; flex-direction:column; gap:8px;
+}
+.wstat-item:first-child { border-right:1px solid rgba(255,255,255,0.07); }
+.wstat-top {
+  display:flex; align-items:center; gap:8px;
+  font-size:12px; color:#8e88a8; font-weight:500;
+  font-family:'Poppins',sans-serif;
+}
+.wstat-ic {
+  width:28px; height:28px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:12px; flex-shrink:0;
+}
+.wstat-ic.green { background:rgba(0,224,150,0.15); color:#00e096; }
+.wstat-ic.orange { background:rgba(255,160,50,0.15); color:#ffb347; }
+.wstat-val {
+  font-size:22px; font-weight:700; color:#fff;
+  font-family:'Poppins',sans-serif;
+}
+
+/* Withdraw Form Card */
+.wdform-card {
+  background:#0c0a1e;
+  border:1px solid rgba(124,111,253,0.18);
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:16px;
+}
+.wdform-head {
+  display:flex; align-items:center; gap:10px;
+  margin-bottom:20px;
+}
+.wdform-head-ic {
+  width:36px; height:36px; border-radius:10px;
+  background:linear-gradient(135deg,#7c3aed,#4c1d95);
+  display:flex; align-items:center; justify-content:center;
+  font-size:15px; color:#fff;
+}
+.wdform-head-txt {
+  font-size:17px; font-weight:700; color:#a855f7;
+  font-family:'Poppins',sans-serif;
+}
+
+/* Payment Method Icons Grid */
+.pm-grid {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:10px; margin-bottom:20px;
+}
+.pm-item {
+  background:#13102a;
+  border:2px solid rgba(255,255,255,0.07);
+  border-radius:14px;
+  padding:12px 6px 9px;
+  display:flex; flex-direction:column; align-items:center; gap:7px;
+  cursor:pointer;
+  transition:border-color .2s, background .2s, box-shadow .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.pm-item:active { transform:scale(.93); }
+.pm-item.active {
+  border-color:#7c3aed;
+  background:rgba(124,111,253,0.14);
+  box-shadow:0 0 14px rgba(124,111,253,0.38), inset 0 0 8px rgba(124,111,253,0.08);
+}
+.pm-ic {
+  width:46px; height:46px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:800; color:#fff;
+  overflow:hidden; flex-shrink:0;
+}
+.pm-ic.bkash  { background:linear-gradient(135deg,#e2136e,#9a0e4b); }
+.pm-ic.nagad  { background:linear-gradient(135deg,#f6821f,#c8510d); }
+.pm-ic.rocket { background:linear-gradient(135deg,#8b1db8,#5a0f7a); }
+.pm-ic.binance{ background:linear-gradient(135deg,#f0b90b,#c8900a); color:#1a1200; }
+.pm-ic.crypto { background:linear-gradient(135deg,#f7931a,#b56010); }
+.pm-lbl {
+  font-size:10px; font-weight:600; color:#9ca3af;
+  font-family:'Poppins',sans-serif; text-align:center;
+}
+.pm-item.active .pm-lbl { color:#c4b5fd; }
+
+/* Input fields */
+.wdinput-g { margin-bottom:14px; }
+.wdinput-lbl {
+  font-size:11px; font-weight:700; color:#6b7280;
+  font-family:'Poppins',sans-serif;
+  text-transform:uppercase; letter-spacing:0.9px;
+  display:block; margin-bottom:8px;
+}
+.wdinput-wrap { position:relative; }
+.wdinput {
+  width:100%;
+  background:#0f0c22;
+  border:1.5px solid rgba(255,255,255,0.09);
+  border-radius:12px;
+  padding:14px 44px 14px 16px;
+  font-size:14px; color:#fff;
+  font-family:'Poppins',sans-serif;
+  outline:none;
+  transition:border-color .2s;
+  -webkit-appearance:none; appearance:none;
+}
+.wdinput:focus { border-color:rgba(124,111,253,0.55); }
+.wdinput::placeholder { color:#3d3a58; }
+.wdinput-icon {
+  position:absolute; right:15px; top:50%; transform:translateY(-50%);
+  color:#3d3a58; font-size:16px; pointer-events:none;
+}
+.wdinput-taka {
+  position:absolute; right:15px; top:50%; transform:translateY(-50%);
+  color:#4a5070; font-size:20px; font-weight:700; pointer-events:none;
+  font-family:'Hind Siliguri',sans-serif;
+}
+.wdmin-info {
+  display:flex; align-items:center; gap:5px;
+  font-size:11px; color:#4a5070;
+  font-family:'Poppins',sans-serif;
+  margin-top:7px;
+}
+.wdmin-info i { color:#7c6ffd; font-size:12px; }
+.wdmin-info .mn-val { color:#8b7fd4; font-weight:600; }
+
+/* Withdraw Now Button */
+.wd-btn {
+  width:100%;
+  background:linear-gradient(90deg,#6d28d9 0%,#9333ea 50%,#7c3aed 100%);
+  border:none;
+  border-radius:14px;
+  padding:0 20px;
+  height:54px;
+  display:flex; align-items:center; justify-content:space-between;
+  cursor:pointer;
+  box-shadow:0 6px 24px rgba(109,40,217,0.45);
+  transition:all .2s;
+  margin-top:4px;
+}
+.wd-btn:active { transform:scale(.97); box-shadow:0 2px 12px rgba(109,40,217,0.35); }
+.wd-btn:disabled { opacity:.6; pointer-events:none; }
+.wd-btn-txt {
+  font-size:16px; font-weight:700; color:#fff;
+  font-family:'Poppins',sans-serif; letter-spacing:.3px;
+}
+.wd-btn-arrow {
+  width:38px; height:38px; border-radius:50%;
+  background:rgba(255,255,255,0.18);
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; color:#fff;
+  flex-shrink:0;
+}
+
+/* Ad info */
+.wd-ad-info {
+  background:rgba(124,111,253,.08); border:1px solid rgba(124,111,253,.2);
+  border-radius:12px; padding:12px 14px; margin-top:12px;
+  font-size:12px; color:rgba(255,255,255,.7); display:none;
+  line-height:1.6; font-family:'Poppins',sans-serif;
+}
+
+/* Withdrawal History */
+.wdhist-head {
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:14px;
+}
+.wdhist-title {
+  display:flex; align-items:center; gap:8px;
+  font-size:16px; font-weight:700; color:#fff;
+  font-family:'Poppins',sans-serif;
+}
+.wdhist-title i { color:#a855f7; }
+.wdhist-all {
+  display:flex; align-items:center; gap:4px;
+  font-size:12px; color:#6b7280;
+  font-family:'Poppins',sans-serif;
+  text-decoration:none; cursor:pointer;
+}
+.wdhist-all i { font-size:10px; }
+
+/* History Item */
+.hitem-new {
+  background:#0c0a1e;
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:14px;
+  padding:14px;
+  margin-bottom:10px;
+  display:flex; align-items:center; gap:12px;
+}
+.hitem-logo {
+  width:46px; height:46px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px; font-weight:800; flex-shrink:0;
+  color:#fff;
+}
+.hitem-logo.bkash  { background:linear-gradient(135deg,#e2136e,#9a0e4b); }
+.hitem-logo.nagad  { background:linear-gradient(135deg,#f6821f,#c8510d); }
+.hitem-logo.rocket { background:linear-gradient(135deg,#8b1db8,#5a0f7a); }
+.hitem-logo.binance{ background:linear-gradient(135deg,#f0b90b,#c8900a); color:#1a1200; }
+.hitem-logo.crypto { background:linear-gradient(135deg,#f7931a,#b56010); }
+.hitem-logo.default{ background:rgba(255,255,255,0.08); }
+.hitem-inf { flex:1; min-width:0; }
+.hitem-name { font-size:14px; font-weight:600; color:#fff; font-family:'Poppins',sans-serif; }
+.hitem-acc  { font-size:11px; color:#4a5070; font-family:monospace; margin-top:2px; }
+.hitem-date { font-size:10px; color:#3d3a58; margin-top:2px; font-family:'Poppins',sans-serif; }
+.hitem-right { text-align:right; flex-shrink:0; }
+.hstatus { font-size:12px; font-weight:600; margin-bottom:4px; }
+.hstatus.approved { color:#00e096; }
+.hstatus.pending  { color:#ffc84a; }
+.hstatus.rejected { color:#ff5f5f; }
+.hitem-amt { font-size:15px; font-weight:700; color:#fff; font-family:'Poppins',sans-serif; }
+.hitem-reject-reason {
+  font-size:10px; color:#ff5f5f;
+  font-family:'Poppins',sans-serif; margin-top:4px;
+}
+
+/* ===================== BOTTOM NAV ===================== */
 .bottom-bar {
   position:fixed; bottom:0; left:50%; transform:translateX(-50%);
   width:100%; max-width:420px; background:#090514;
@@ -495,16 +741,12 @@ select.fi option { background:#1a1d26; }
   <div class="blocked-sub">Check your Network and try again</div>
 </div>
 
-<!-- Loading Screen -->
-
-
 <!-- ===================== MAIN CONTAINER ===================== -->
 <div class="mobile-container">
 
   <!-- ===== HOME PAGE ===== -->
   <div class="page active" id="page-home">
 
-    <!-- 1. Header -->
     <div class="header">
       <div class="profile-sec">
         <div id="uava-wrap">
@@ -520,17 +762,13 @@ select.fi option { background:#1a1d26; }
       </div>
     </div>
 
-    <!-- 2. Balance Card -->
     <div class="balance-card">
       <div class="bc-content">
         <div class="balance-title">Total Balance <i class="fa-regular fa-eye"></i></div>
-
         <div style="display:flex;align-items:baseline;gap:6px;margin:4px 0 2px">
-  <div class="balance-amount" style="font-size:28px;white-space:nowrap;">৳ <span id="hbal">0.00</span></div>
-</div>
-
+          <div class="balance-amount" style="font-size:28px;white-space:nowrap;">৳ <span id="hbal">0.00</span></div>
+        </div>
         <div class="balance-sub">Available Balance</div>
-
         <div class="stats-boxes">
           <div class="stat-box withdrawn">
             <div class="sb-icon bg-purple-grad"><i class="fa-solid fa-wallet"></i></div>
@@ -548,8 +786,6 @@ select.fi option { background:#1a1d26; }
           </div>
         </div>
       </div>
-
-      <!-- Pure CSS 3D Wallet -->
       <div class="css-3d-wallet-container">
         <div class="css-wallet-body">
           <div class="css-wallet-flap">
@@ -562,7 +798,6 @@ select.fi option { background:#1a1d26; }
       </div>
     </div>
 
-    <!-- 3. Mid Stats Row -->
     <div class="mid-stats" style="display:none;">
       <div class="m-stat">
         <div class="m-icon purple"><i class="fa-solid fa-user-group"></i></div>
@@ -590,21 +825,17 @@ select.fi option { background:#1a1d26; }
       </div>
     </div>
 
-    <!-- Marquee -->
     <div class="marquee-wrap" style="display:none;">
       <marquee behavior="scroll" direction="left" scrollamount="3">
         🛑একমাত্র আমাদের সাইটেই পাবেন ১০০% পেমেন্ট গ্যারান্টি।🛑।🛑অ্যাডের টাইমার সম্পূর্ণ শেষ না হওয়া পর্যন্ত পেজ কাটবেন না।নিয়ম মেনে কাজ না করলে পেমেন্ট রিজেক্ট করা হবে।🛑
       </marquee>
     </div>
 
-    <!-- 4. Ad Watch Section -->
     <div class="ad-section">
       <div class="ad-top-badge" id="wcRB">+৳ 0.50</div>
-
       <div class="ad-content">
         <div class="ad-title">বিজ্ঞাপন দেখে আয় করুন ✨</div>
         <div class="ad-desc">বিজ্ঞাপন দেখুন এবং সহজেই প্রতিদিন টাকা ইনকাম করুন 😉</div>
-
         <div class="ad-stats-row">
           <div class="ad-s-item">
             <h4><i class="fa-solid fa-eye purple"></i> <span id="wcTodayAd">0</span></h4>
@@ -620,8 +851,6 @@ select.fi option { background:#1a1d26; }
           </div>
         </div>
       </div>
-
-      <!-- Watch Button -->
       <button class="watch-ad-btn" id="watchBtn" onclick="startChain('watch')">
         <div class="btn-left">
           <div class="btn-play-icon"><i class="fa-solid fa-play"></i></div>
@@ -632,16 +861,12 @@ select.fi option { background:#1a1d26; }
         </div>
         <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
       </button>
-
       <div class="cooldown-bar-wrap" id="cooldownBarWrap">
         <div class="cooldown-bar" id="cooldownBar" style="width:100%"></div>
       </div>
-
       <div class="ad-footer">
         <i class="fa-solid fa-shield-halved"></i> পুরো বিজ্ঞাপন দেখুন এবং পুরস্কার পান
       </div>
-
-      <!-- Pure CSS 3D Play -->
       <div class="css-3d-play-container">
         <div class="css-play-box">
           <div class="css-play-triangle"></div>
@@ -651,7 +876,6 @@ select.fi option { background:#1a1d26; }
       </div>
     </div>
 
-    <!-- Group & Tutorial mini cards -->
     <div class="minicard">
       <div class="minicard-ic" style="background:rgba(34,158,217,.15)">📢</div>
       <div class="minicard-inf">
@@ -669,7 +893,6 @@ select.fi option { background:#1a1d26; }
       <button class="minicard-btn" onclick="openMiniLink(MINI_LINKS.tutorial)">দেখুন</button>
     </div>
 
-    <!-- 5. Tasks -->
     <div class="task-header">
       <h3><i class="fa-solid fa-bolt" style="color:#c084fc"></i> Tasks</h3>
       <a href="#">সব দেখুন <i class="fa-solid fa-angle-right"></i></a>
@@ -721,54 +944,149 @@ select.fi option { background:#1a1d26; }
   <!-- ===== WALLET PAGE ===== -->
   <div class="page" id="page-wallet">
     <div class="pgt"><div class="pgtitle">Wallet</div></div>
-    <div class="wbal">
-      <div class="wbl">Available Balance</div>
-      <div class="wba-wrap"><div class="wba" id="wdBal">0.00</div><div class="wba-taka">টাকা</div></div>
-      <div class="wbs">Withdrawable</div>
-    </div>
-    <div class="wdform">
-      <div class="ftitle">💸 Withdraw Request</div>
-      <div class="fg"><span class="flbl">Payment Method</span>
-        <div class="sw">
-          <select class="fi" id="wdWallet">
-            <option value="">— Select method —</option>
-            <option value="bkash">💰 bKash</option>
-            <option value="nagad">💰 Nagad</option>
-            <option value="rocket">💰 Rocket</option>
-            <option value="binance">🟡 Binance (USDT)</option>
-            <option value="crypto">₿ Crypto</option>
-          </select>
-          <span class="sarr">▾</span>
+
+    <!-- Balance Card -->
+    <div class="wbal-card">
+      <div class="wbal-top">
+        <div class="wbal-label">
+          <i class="fa-solid fa-wallet"></i> Wallet Balance
+        </div>
+        <div class="wbal-3d">
+          <div class="wbal-body">
+            <div class="wbal-flap">
+              <div class="wbal-btn"></div>
+            </div>
+          </div>
+          <div class="wbal-c wbal-c1">৳</div>
+          <div class="wbal-c wbal-c2">৳</div>
         </div>
       </div>
-      <div class="fg"><span class="flbl">Account Number</span><input class="fi" type="text" id="wdAcc" placeholder="Enter your number..." inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
-      <div class="fg">
-        <span class="flbl">Amount</span>
-        <input class="fi" type="number" id="wdAmt" placeholder="0.00" inputmode="numeric" min="0">
-        <div style="font-size:11px;color:var(--muted);margin-top:5px;font-family:'Poppins',sans-serif">Minimum: <span id="minWd" style="color:var(--taka);font-family:'Hind Siliguri',sans-serif">৳ 50</span></div>
+      <div class="wbal-amount-row">
+        <span class="wbal-taka">৳ </span><span class="wbal-num" id="wdBal">0.00</span>
       </div>
-      <button class="bigbtn wdbtn-main" id="wdBtn" onclick="handleWithdraw()">Withdraw Now →</button>
+      <div style="margin-top:10px;">
+        <div class="wbal-badge">
+          <i class="fa-solid fa-wallet"></i> Total Balance
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Row: Withdrawn | Pending -->
+    <div class="wstats-row">
+      <div class="wstat-item">
+        <div class="wstat-top">
+          <div class="wstat-ic green"><i class="fa-solid fa-arrow-down"></i></div>
+          Withdrawn
+        </div>
+        <div class="wstat-val">৳ <span id="wStatWd">0.00</span></div>
+      </div>
+      <div class="wstat-item">
+        <div class="wstat-top">
+          <div class="wstat-ic orange"><i class="fa-regular fa-clock"></i></div>
+          Pending
+        </div>
+        <div class="wstat-val">৳ <span id="wStatPending">0.00</span></div>
+      </div>
+    </div>
+
+    <!-- Withdraw Money Card -->
+    <div class="wdform-card">
+      <div class="wdform-head">
+        <div class="wdform-head-ic"><i class="fa-solid fa-upload"></i></div>
+        <div class="wdform-head-txt">Withdraw Money</div>
+      </div>
+
+      <!-- Payment Method Grid -->
+      <div class="pm-grid" id="pmGrid">
+        <div class="pm-item active" onclick="selectPM(this,'bkash')">
+          <div class="pm-ic bkash">bKash</div>
+          <div class="pm-lbl">bKash</div>
+        </div>
+        <div class="pm-item" onclick="selectPM(this,'nagad')">
+          <div class="pm-ic nagad">Nagad</div>
+          <div class="pm-lbl">Nagad</div>
+        </div>
+        <div class="pm-item" onclick="selectPM(this,'rocket')">
+          <div class="pm-ic rocket">Rocket</div>
+          <div class="pm-lbl">Rocket</div>
+        </div>
+        <div class="pm-item" onclick="selectPM(this,'binance')">
+          <div class="pm-ic binance">BNB</div>
+          <div class="pm-lbl">Binance</div>
+        </div>
+      </div>
+
+      <!-- Hidden select for JS compatibility -->
+      <select id="wdWallet" style="display:none;">
+        <option value="bkash" selected>bKash</option>
+        <option value="nagad">Nagad</option>
+        <option value="rocket">Rocket</option>
+        <option value="binance">Binance (USDT)</option>
+        <option value="crypto">Crypto</option>
+      </select>
+
+      <!-- Account Number -->
+      <div class="wdinput-g">
+        <label class="wdinput-lbl">Account Number</label>
+        <div class="wdinput-wrap">
+          <input class="wdinput" type="text" id="wdAcc"
+            placeholder="Enter your account number"
+            inputmode="numeric"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+          <span class="wdinput-icon"><i class="fa-regular fa-user"></i></span>
+        </div>
+      </div>
+
+      <!-- Withdraw Amount -->
+      <div class="wdinput-g">
+        <label class="wdinput-lbl">Withdraw Amount</label>
+        <div class="wdinput-wrap">
+          <input class="wdinput" type="number" id="wdAmt"
+            placeholder="Enter amount"
+            inputmode="numeric" min="0">
+          <span class="wdinput-taka">৳</span>
+        </div>
+        <div class="wdmin-info">
+          <i class="fa-solid fa-circle-info"></i>
+          Minimum withdraw amount is <span class="mn-val" id="minWd">৳50</span>
+        </div>
+      </div>
+
+      <!-- Withdraw Button -->
+      <button class="wd-btn" id="wdBtn" onclick="handleWithdraw()">
+        <span class="wd-btn-txt">Withdraw Now</span>
+        <div class="wd-btn-arrow"><i class="fa-solid fa-paper-plane"></i></div>
+      </button>
+
       <div class="wd-ad-info" id="wdAdInfo">⚡ <span id="wdAdInfoTxt">Watch ads before withdrawal</span></div>
     </div>
-    <div class="sec2">📋 Withdrawal History</div>
-    <div id="wdHist"><div class="empty"><div class="eic">📭</div>No withdrawals yet</div></div>
-  </div>
+
+    <!-- Withdrawal History -->
+    <div class="wdhist-head">
+      <div class="wdhist-title">
+        <i class="fa-regular fa-clock"></i> Withdrawal History
+      </div>
+      <div class="wdhist-all">View All <i class="fa-solid fa-angle-right"></i></div>
+    </div>
+    <div id="wdHist">
+      <div class="empty"><div class="eic">📭</div>No withdrawals yet</div>
+    </div>
+
+  </div><!-- /page-wallet -->
 
 </div><!-- /mobile-container -->
 
 <!-- ===================== BOTTOM NAV ===================== -->
 <div class="bottom-bar">
-<div class="nav-link" id="nav-referral" onclick="showPage('referral',this)">
+  <div class="nav-link" id="nav-referral" onclick="showPage('referral',this)">
     <i class="fa-solid fa-users"></i> <span>Referral</span>
   </div>
-<div class="nav-link" id="nav-support" onclick="showPage('support',this)">
+  <div class="nav-link" id="nav-support" onclick="showPage('support',this)">
     <i class="fa-solid fa-headset"></i> <span>Support</span>
   </div>
-
   <div class="nav-link active" id="nav-home" onclick="showPage('home',this)">
     <i class="fa-solid fa-house"></i> <span>Home</span>
   </div>
-
   <div class="nav-link" id="nav-wallet" onclick="showPage('wallet',this)">
     <i class="fa-solid fa-wallet"></i> <span>Wallet</span>
   </div>
@@ -789,42 +1107,25 @@ select.fi option { background:#1a1d26; }
   </div>
 </div>
 
-<!-- ===================== AD OVERLAY — Purple card style ===================== -->
+<!-- AD OVERLAY -->
 <div class="adov" id="adOverlay">
-  <!-- Purple card shell -->
   <div class="adov-card">
-
-    <!-- Thin segment-steps bar -->
     <div class="adov-steps" id="adovSteps"></div>
-
-    <!-- Spinning ring -->
     <div class="adov-spinner-wrap">
       <div class="adov-spinner-ring"></div>
     </div>
-
-    <!-- Instruction text (shown when ad opens externally) -->
     <div class="adov-waiting" id="adovWaiting">বিজ্ঞাপন দেখুন, তারপর পরবর্তী চাপুন</div>
-
-    <!-- Divider line (shown together with waiting text) -->
     <div class="adov-divider" id="adovDivider"></div>
-
-    <!-- Next / Continue white pill button -->
     <button class="adov-continue" id="adovContinue" onclick="onAdsterraBack()">▶ পরবর্তী</button>
-
-    <!-- Withdrawal loading -->
     <div class="adov-wd-loading" id="adovWdLoading">
       <div class="adov-wd-spinner"></div>
       <div class="adov-wd-txt">Processing your withdrawal...</div>
     </div>
-
-    <!-- Completion state -->
     <div class="adov-complete" id="adovComplete">
       <div class="adov-complete-ic">🎉</div>
       <div class="adov-complete-txt" id="adovCompleteTxt">+৳ 0.50 Added!</div>
       <div class="adov-complete-sub" id="adovCompleteSub">Balance updated automatically</div>
     </div>
-
-    <!-- Hidden JS-ref elements (kept for compatibility, invisible) -->
     <div class="adov-type" id="adovType"></div>
     <div class="adov-title" id="adovTitle"></div>
     <div class="adov-reward-wrap">
@@ -836,13 +1137,12 @@ select.fi option { background:#1a1d26; }
     <div class="adov-status" id="adovStatus"></div>
     <div class="adov-step-lbl" id="adovStepLbl"></div>
     <div class="adov-net-name" id="adovNetName"></div>
-
-  </div><!-- /adov-card -->
+  </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
-<!-- ===================== JAVASCRIPT (unchanged) ===================== -->
+<!-- ===================== JAVASCRIPT ===================== -->
 <script>
 const MINI_LINKS = {
   group: 'https://t.me/zomato_app_payment_proof',
@@ -858,6 +1158,7 @@ let APP={userId:null,userName:null,userPhoto:null,balance:0,totalEarned:0,totalW
 let CS={active:false,type:null,queue:[],idx:0,total:0,reward:0,done:false,wdData:null};
 let cooldownInterval=null,cooldownEndTime=0;
 let TOV={taskId:null,link:null,channelId:null};
+let _selectedPM='bkash';
 
 const MONETAG_ZONE='10900318';
 const MONETAG_SDK_FN='show_'+MONETAG_ZONE;
@@ -869,6 +1170,14 @@ function openMiniLink(link){
   const tg=window.Telegram?.WebApp;
   if(tg){if(link.includes('t.me')||link.includes('telegram'))tg.openTelegramLink(link);else tg.openLink(link);}
   else window.open(link,'_blank');
+}
+
+/* Payment Method Selection */
+function selectPM(el, val) {
+  document.querySelectorAll('.pm-item').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  _selectedPM = val;
+  document.getElementById('wdWallet').value = val;
 }
 
 window.addEventListener('DOMContentLoaded',async()=>{
@@ -926,8 +1235,7 @@ window.addEventListener('DOMContentLoaded',async()=>{
 
     uRef.on('value',snap=>{
       const d=snap.val();if(!d)return;
-      if(d.blocked===true){document.getElementById('blockedScreen').style.display='flex';const ls = document.getElementById('ls');
-if (ls) ls.style.display = 'none';if(window.Telegram?.WebApp)setTimeout(()=>window.Telegram.WebApp.close(),400);return;}
+      if(d.blocked===true){document.getElementById('blockedScreen').style.display='flex';const ls=document.getElementById('ls');if(ls)ls.style.display='none';if(window.Telegram?.WebApp)setTimeout(()=>window.Telegram.WebApp.close(),400);return;}
       APP.balance=d.balance||0;APP.totalEarned=d.totalEarned||0;APP.totalWithdrawn=d.totalWithdrawn||0;
       APP.referrals=toArr(d.referrals);APP.completedTasks=toArr(d.completedTasks);APP.watchedAds=toArr(d.watchedAds);
       cooldownEndTime=d.cooldownEndTime||0;
@@ -945,8 +1253,6 @@ if (ls) ls.style.display = 'none';if(window.Telegram?.WebApp)setTimeout(()=>wind
 
   updateProfile();
   updateUI();
-
-  
 });
 
 function checkWelcomePopup(){const wp=APP.settings.welcome||{};if(!wp.enabled)return;document.getElementById('welcomeEmoji').textContent=wp.emoji||'🎉';document.getElementById('welcomeTitle').textContent=wp.title||'Welcome!';document.getElementById('welcomeMsg').textContent=wp.message||'Start earning today!';document.getElementById('welcomeScreen').classList.add('open');}
@@ -1162,10 +1468,16 @@ async function chainAllDone(){
   }
 }
 
-function updateWdBtn(){document.getElementById('wdAdInfo').style.display='none';document.getElementById('wdBtn').textContent='Withdraw Now →';document.getElementById('wdBtn').className='bigbtn wdbtn-main';}
+function updateWdBtn(){
+  document.getElementById('wdAdInfo').style.display='none';
+  document.getElementById('wdBtn').textContent='';
+}
 
 function handleWithdraw(){
-  const wallet=document.getElementById('wdWallet').value,account=document.getElementById('wdAcc').value.trim(),amount=parseFloat(document.getElementById('wdAmt').value),minWd=APP.settings.minWithdraw||50;
+  const wallet=document.getElementById('wdWallet').value||_selectedPM;
+  const account=document.getElementById('wdAcc').value.trim();
+  const amount=parseFloat(document.getElementById('wdAmt').value);
+  const minWd=APP.settings.minWithdraw||50;
   if(!wallet)return showToast('⚠️ Select payment method');
   if(!account)return showToast('⚠️ Enter account number');
   if(!amount||amount<minWd)return showToast(`⚠️ Minimum ৳${minWd.toFixed(2)}`);
@@ -1178,15 +1490,24 @@ function handleWithdraw(){
 
 async function submitWithdrawDirect(wdData){
   if(!wdData)return;
-  const btn=document.getElementById('wdBtn');const orig=btn.textContent;btn.disabled=true;btn.textContent='Processing...';
+  const btn=document.getElementById('wdBtn');
+  const origHTML=btn.innerHTML;
+  btn.disabled=true;
+  btn.innerHTML='<span class="wd-btn-txt">Processing...</span><div class="wd-btn-arrow"><i class="fa-solid fa-spinner fa-spin"></i></div>';
   try{
     const snap=await db.ref('users/'+APP.userId).get();const d=snap.val()||{};
     await db.ref('users/'+APP.userId).update({balance:(d.balance||0)-wdData.amount,totalWithdrawn:(d.totalWithdrawn||0)+wdData.amount});
     await db.ref('withdrawals').push({userId:APP.userId,userName:APP.userName,wallet:wdData.wallet,walletLabel:wdData.walletLabel,account:wdData.account,amount:wdData.amount,status:'pending',reason:'',createdAt:new Date().toISOString()});
-    document.getElementById('wdWallet').value='';document.getElementById('wdAcc').value='';document.getElementById('wdAmt').value='';
+    document.getElementById('wdWallet').value='bkash';
+    document.getElementById('wdAcc').value='';
+    document.getElementById('wdAmt').value='';
+    // reset PM selection to bkash
+    document.querySelectorAll('.pm-item').forEach(b=>b.classList.remove('active'));
+    const first=document.querySelector('.pm-item');if(first){first.classList.add('active');_selectedPM='bkash';}
     showToast('✅ Withdrawal request submitted!');
   }catch(e){showToast('❌ Error: '+e.message);}
-  btn.disabled=false;btn.textContent=orig;
+  btn.disabled=false;
+  btn.innerHTML=origHTML;
 }
 
 function renderSupport(){const cards=APP.settings.supportCards||[];const el=document.getElementById('supGrid');if(!cards.length){el.innerHTML=`<div class="empty" style="grid-column:span 2;font-family:'Hind Siliguri',sans-serif">কোনো সাপোর্ট লিংক নেই</div>`;return;}el.innerHTML=cards.map(c=>`<a href="${c.link||'#'}" class="scard" target="_blank"><div class="sic" style="background:${c.bg||'var(--as)'}">${c.icon||'💬'}</div><div class="st">${c.title}</div><div class="sd">${c.desc||''}</div></a>`).join('');}
@@ -1197,7 +1518,42 @@ function renderRefList(){const el=document.getElementById('rList');const refs=AP
 
 function copyRef(){const l=`https://t.me/${APP.settings.botUsername||'YourBot'}?start=${APP.referralCode}`;navigator.clipboard?.writeText(l).catch(()=>{});showToast('📋 Referral link copied!');}
 function shareRef(){const l=`https://t.me/${APP.settings.botUsername||'YourBot'}?start=${APP.referralCode}`;const tg=window.Telegram?.WebApp;const u=`https://t.me/share/url?url=${encodeURIComponent(l)}&text=${encodeURIComponent('🚀 Join Zomato Platform & earn money daily!')}`;if(tg)tg.openTelegramLink(u);else window.open(u,'_blank');}
-function renderWdHist(items){const el=document.getElementById('wdHist');if(!items.length){el.innerHTML=`<div class="empty"><div class="eic">📭</div>No withdrawals yet</div>`;return;}const wm={bkash:{ic:'💰',bg:'rgba(220,50,120,.15)'},nagad:{ic:'💰',bg:'rgba(0,130,70,.15)'},rocket:{ic:'💰',bg:'rgba(138,0,230,.15)'},binance:{ic:'🟡',bg:'rgba(240,185,11,.15)'},crypto:{ic:'₿',bg:'rgba(247,147,26,.15)'}};const sm={pending:'sp',approved:'sa',rejected:'sr'};const sl={pending:'⏳ Pending',approved:'✓ Approved',rejected:'✗ Rejected'};el.innerHTML=items.map(h=>{const m=wm[h.wallet]||{ic:'💰',bg:'rgba(255,255,255,.08)'};return`<div class="hitem"><div class="htop"><div class="hwallet"><div class="hwic" style="background:${m.bg}">${m.ic}</div><div class="hwn">${h.walletLabel||h.wallet}</div></div><div class="hamt">৳ ${Number(h.amount).toFixed(2)}</div></div><div class="hbtm"><div class="hacc">${h.account}</div><div class="sbdg ${sm[h.status]||'sp'}">${sl[h.status]||'Pending'}</div></div><div class="ht">🕐 ${fd(h.createdAt)}</div>${h.status==='rejected'&&h.reason?`<div class="hrr">⚠️ <span>${h.reason}</span></div>`:''}</div>`;}).join('');}
+
+function renderWdHist(items){
+  const el=document.getElementById('wdHist');
+
+  // Calculate pending total for stats
+  const pendingTotal=items.filter(h=>h.status==='pending').reduce((s,h)=>s+Number(h.amount),0);
+  const wStatWd=document.getElementById('wStatWd');
+  const wStatPending=document.getElementById('wStatPending');
+  if(wStatWd) wStatWd.textContent=APP.totalWithdrawn.toFixed(2);
+  if(wStatPending) wStatPending.textContent=pendingTotal.toFixed(2);
+
+  if(!items.length){el.innerHTML=`<div class="empty"><div class="eic">📭</div>No withdrawals yet</div>`;return;}
+
+  const logoClass={bkash:'bkash',nagad:'nagad',rocket:'rocket',binance:'binance',crypto:'crypto'};
+  const logoText={bkash:'bK',nagad:'N',rocket:'R',binance:'B',crypto:'₿'};
+
+  el.innerHTML=items.map(h=>{
+    const lc=logoClass[h.wallet]||'default';
+    const lt=logoText[h.wallet]||'💰';
+    const stClass=h.status==='approved'?'approved':h.status==='rejected'?'rejected':'pending';
+    const stLabel=h.status==='approved'?'Approved':h.status==='rejected'?'Rejected':'Pending';
+    return`<div class="hitem-new">
+      <div class="hitem-logo ${lc}">${lt}</div>
+      <div class="hitem-inf">
+        <div class="hitem-name">${h.walletLabel||h.wallet}</div>
+        <div class="hitem-acc">${h.account}</div>
+        <div class="hitem-date">${fd(h.createdAt)}</div>
+        ${h.status==='rejected'&&h.reason?`<div class="hitem-reject-reason">⚠️ ${h.reason}</div>`:''}
+      </div>
+      <div class="hitem-right">
+        <div class="hstatus ${stClass}">${stLabel}</div>
+        <div class="hitem-amt">৳ ${Number(h.amount).toFixed(2)}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
 
 function updateProfile(){
   document.getElementById('uname').textContent='Hello, '+APP.userName+' 👋';
@@ -1222,6 +1578,9 @@ function updateUI(){
   document.getElementById('rCoins').textContent=`৳${(refCount*(APP.settings.referralBonus||5)).toFixed(2)}`;
   document.getElementById('rActive').textContent=refCount;
   document.getElementById('rLink').textContent=`https://t.me/${APP.settings.botUsername||'YourBot'}?start=${APP.referralCode}`;
+  // Update wallet stats
+  const wStatWd=document.getElementById('wStatWd');
+  if(wStatWd) wStatWd.textContent=APP.totalWithdrawn.toFixed(2);
   renderRefList();renderTasks();
 }
 
